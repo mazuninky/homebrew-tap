@@ -1,4 +1,4 @@
-name: brew test-bot
+name: CI
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  test-bot:
+  lint:
     strategy:
       fail-fast: false
       matrix:
@@ -19,7 +19,11 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: false
+          cask: false
+          test-bot: false
 
       - name: Cache Homebrew Bundler RubyGems
         uses: actions/cache@v4
@@ -28,8 +32,12 @@ jobs:
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
 
-      - run: brew test-bot --only-cleanup-before
+      - name: Install Homebrew Bundler RubyGems
+        if: steps.set-up-homebrew.outputs.gems-hash != ''
+        run: brew install-bundler-gems
 
-      - run: brew test-bot --only-setup
+      - name: brew style
+        run: brew style mazuninky/tap
 
-      - run: brew test-bot --only-tap-syntax
+      - name: brew audit
+        run: brew audit --strict --online --tap=mazuninky/tap
