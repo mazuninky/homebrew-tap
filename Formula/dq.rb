@@ -5,19 +5,19 @@ class Dq < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/mazuninky/dq/releases/download/v2026.20.1/dq-2026.20.1-aarch64-apple-darwin.tar.gz"
-      sha256 "7b12e0752b88004ff11cd35d7948a2d173ba8434a6c671973c344fdefadd2fb2"
+      url "https://github.com/mazuninky/dq/releases/download/v2026.20.2/dq-2026.20.2-aarch64-apple-darwin.tar.gz"
+      sha256 "c02a62377ce4a1f697a83ff3576cc46a15b33c55ff68095005e55946b197b1bf"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mazuninky/dq/releases/download/v2026.20.1/dq-2026.20.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5d87cc42f9d8b71665828cb8ea69de2bd8fb265ca617c42c0d8c7bd93d50298e"
+      url "https://github.com/mazuninky/dq/releases/download/v2026.20.2/dq-2026.20.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "893cb4706ccd23b58a763e0a3a02ef5e25211e530f3ed4cb2ef18b58ae779256"
     end
     on_arm do
-      url "https://github.com/mazuninky/dq/releases/download/v2026.20.1/dq-2026.20.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a201b163123e6956efec2d715059d538ee7a61ab8d7975ba5650e5d3ad57974d"
+      url "https://github.com/mazuninky/dq/releases/download/v2026.20.2/dq-2026.20.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "25edf5bb706bcd0bace5a902debae47c6338deaaf4541fd60b00d214df69b3e5"
     end
   end
 
