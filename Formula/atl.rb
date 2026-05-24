@@ -5,15 +5,15 @@ class Atl < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/mazuninky/atl/releases/download/v2026.21.1/atl-2026.21.1-aarch64-apple-darwin.tar.gz"
-      sha256 "61cc1c4b1a3643ad964fdf64234fc8f24426f2eae2ce5f286c164c03b9181eb8"
+      url "https://github.com/mazuninky/atl/releases/download/v2026.21.2/atl-2026.21.2-aarch64-apple-darwin.tar.gz"
+      sha256 "7337ddc46fa26c05719dfdd050aba71462d567aebe560996e5506bebe8d6bd4b"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mazuninky/atl/releases/download/v2026.21.1/atl-2026.21.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "56a6f5b9e1c484e30f585193bbd00c23a44be6ee5ae14e2d638f4994ddf604a6"
+      url "https://github.com/mazuninky/atl/releases/download/v2026.21.2/atl-2026.21.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "702b384915a701e00c45a022295f4869e26c62eaec7ae8f44d56d3c4fcf9908c"
     end
   end
 
