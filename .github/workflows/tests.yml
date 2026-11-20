@@ -35,6 +35,10 @@ jobs:
         if: steps.set-up-homebrew.outputs.gems-hash != ''
         run: brew install-bundler-gems
 
+      # Homebrew refuses to load formulae from a third-party tap until it is trusted.
+      - name: Trust this tap
+        run: brew trust mazuninky/tap
+
       - name: brew style
         run: brew style mazuninky/tap
 
