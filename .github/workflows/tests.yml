@@ -49,3 +49,16 @@ jobs:
 
       - name: brew audit
         run: brew audit --strict --online --tap=mazuninky/tap
+
+  # The one required status check: the branch ruleset requires this job
+  # instead of each job above, whose names change with the matrix.
+  ci-success:
+    name: ci-success
+    needs: [lint]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Fail if any dependency failed
+        if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
+        run: exit 1
+      - run: echo "All CI checks passed"
