@@ -39,6 +39,11 @@ jobs:
       - name: Trust this tap
         run: brew trust mazuninky/tap
 
+      # What `brew tap` checks for a trusted tap: every formula loads on every
+      # OS and architecture, so each one needs a URL for all of them.
+      - name: brew readall (every OS and architecture)
+        run: brew readall --os=all --arch=all mazuninky/tap
+
       - name: brew style
         run: brew style mazuninky/tap
 
