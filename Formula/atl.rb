@@ -5,23 +5,23 @@ class Atl < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/mazuninky/atl/releases/download/v2026.48.1/atl-2026.48.1-aarch64-apple-darwin.tar.gz"
-      sha256 "b570dad1bdac82fb2d14aa466a9cbe5e04e9547ade6146aed98858890f9d3bed"
+      url "https://github.com/mazuninky/atl/releases/download/v2026.48.2/atl-2026.48.2-aarch64-apple-darwin.tar.gz"
+      sha256 "69d5a7d215f461ceabf35220125ca0c0a07dfad86a128551a0afbe208f0025c8"
     end
     on_intel do
-      url "https://github.com/mazuninky/atl/releases/download/v2026.48.1/atl-2026.48.1-x86_64-apple-darwin.tar.gz"
-      sha256 "6d60da06144afe274456655f471730227fc8aaf13fc6af9137d1011cc36af731"
+      url "https://github.com/mazuninky/atl/releases/download/v2026.48.2/atl-2026.48.2-x86_64-apple-darwin.tar.gz"
+      sha256 "92f118996eacd6bbb00c8f7e2f8015727c379e565aabc7d68e13c477ee1654d8"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mazuninky/atl/releases/download/v2026.48.1/atl-2026.48.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4eb177179e198faa7f7e96015ddf39d7834e9071cbbd0a07d4757387984bad53"
+      url "https://github.com/mazuninky/atl/releases/download/v2026.48.2/atl-2026.48.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "963205a5accc51e73c8331f737eb3dfbf79c640276e1777c0f6df66506038853"
     end
     on_arm do
-      url "https://github.com/mazuninky/atl/releases/download/v2026.48.1/atl-2026.48.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "053e97f0703b4e5e8fcc54c65ea128c10dc09aec0f3698cc8ff51235281ad3f6"
+      url "https://github.com/mazuninky/atl/releases/download/v2026.48.2/atl-2026.48.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "87d92f0fcc12264026aa2237c1adc83639b9fe8b88a38b9cb3bc004f87448f1e"
     end
   end
 
